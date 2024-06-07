@@ -1,0 +1,120 @@
+body {
+    background-color: #000000;
+    background-image: url('https://img.freepik.com/premium-photo/stethoscope-black-background-copy-space_446269-367.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0; /* Reset default margin */
+    padding: 0; /* Reset default padding */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align elements to the left */
+    min-height: calc(100vh - 40px); /* Subtract padding from min-height to maintain space at bottom */
+    padding: 20px; /* Add some padding to the container */
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-start; /* Align buttons to the left */
+    margin-left: 20px; /* Adjust margin to create space between container and buttons */
+}
+
+.button {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0; /* Adjust vertical margin */
+}
+
+.button:hover {
+    background-color: #dddddd;
+}
+
+.return-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 999; /* Ensure it's above other elements */
+    margin-left: 20px; /* Adjust margin to create space between buttons */
+}
+
+.return-button input[type="button"] {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.return-button input[type="button"]:hover {
+    background-color: #dddddd;
+}
+
+p {
+    font-family: 'Times New Roman', Times, serif; /* Set font family for paragraphs */
+    font-size: 1rem; /* Set font size for paragraphs */
+    background-color: rgba(240, 240, 240, 0.8); /* Transparent white */
+    padding: 20px; /* Add padding to the container */
+    border-radius: 10px; /* Add border radius to the container */
+    text-align: left; /* Align text to the left within the container */
+    max-width: 800px; /* Set maximum width */
+    margin: 20px 20px 40px 20px; /* Adjust margins */
+}
+
+p {
+    margin-bottom: 10px; /* Add some space between paragraphs */
+    color: #000000; /* Set text color to black */
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    color: white; /* Set text color to white */
+    background-color: black; /* Set background color to black */
+    padding: 20px; /* Add padding to the elements */
+    text-align: center; /* Center-align the text */
+    border-top: 0; /* Remove the border-top */
+    margin: 20px; /* Add outer margin */
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem; /* Set font size for subheading */
+    color: white; /* Set text color to white */
+    margin-left: 20px; /* Adjust margin to the left */
+}
+
+.input-label {
+    margin-right: 100px; /* Adjust margin to move the input labels to the right */
+    text-align: right; /* Align text to the right */
+    width: 120px; /* Set a fixed width for labels */
+    display: inline-block; /* Display labels inline */
+    vertical-align: top; /* Align labels to the top */
+}
+
+.input-field {
+    margin-right: 20px; /* Adjust margin to the right */
+    width: 200px; /* Set a fixed width for input fields */
+}
+.error {
+    color: red;
+    margin-right: 10px; /* Adjust margin to create space between error messages and input boxes */
+    margin-bottom: 5px; /* Add some space between error messages and input boxes */
+    display: inline-block; /* Display error messages inline */
+}
+.info-container {
+    display: flex;
+    flex-direction: column;
+    left: 20px;
+    align-items: flex-start;
+    margin-bottom: 20px; /* Add some space between the info container and the button */
+    margin-left: 20px;
+}

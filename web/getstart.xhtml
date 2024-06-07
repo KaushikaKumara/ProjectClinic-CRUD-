@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <style>
+            body {
+                background-color: #000000;
+                background-image: url('https://img.freepik.com/premium-photo/stethoscope-black-background-copy-space_446269-367.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                color: #ffffff;
+                font-family: Arial, sans-serif;
+                margin: 0; /* Reset default margin */
+                padding: 0; /* Reset default padding */
+            }
+
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start; /* Align elements to the left */
+                min-height: calc(100vh - 40px); /* Subtract padding from min-height to maintain space at bottom */
+                padding: 20px; /* Add some padding to the container */
+            }
+
+            .button-container {
+                display: flex;
+                justify-content: flex-start; /* Align buttons to the left */
+                margin-left: 20px; /* Adjust margin to create space between container and buttons */
+            }
+
+            .button {
+                background-color: #ffffff;
+                color: #000000;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                margin: 0 10px;
+            }
+
+            .button:hover {
+                background-color: #dddddd;
+            }
+
+            .return-button {
+                position: fixed;
+                bottom: 20px;
+                left: 20px;
+                z-index: 999; /* Ensure it's above other elements */
+                margin-left: 20px; /* Adjust margin to create space between buttons */
+            }
+
+            .return-button input[type="button"] {
+                background-color: #ffffff;
+                color: #000000;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            .return-button input[type="button"]:hover {
+                background-color: #dddddd;
+            }
+
+            .paragraph-container {
+                font-family: 'Times New Roman', Times, serif; /* Set font family for paragraphs */
+                font-size: 1rem; /* Set font size for paragraphs */
+                background-color: rgba(240, 240, 240, 0.8); /* Transparent white */
+                padding: 20px; /* Add padding to the container */
+                border-radius: 10px; /* Add border radius to the container */
+                text-align: left; /* Align text to the left within the container */
+                max-width: 800px; /* Set maximum width */
+                margin: 20px 20px 20px 40px; /* Adjust margins */
+            }
+
+            p {
+                margin-bottom: 10px; /* Add some space between paragraphs */
+                color: #000000; /* Set text color to black */
+            }
+
+            h1 {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 1.5rem;
+                color: white; /* Set text color to white */
+                background-color: black; /* Set background color to black */
+                padding: 20px; /* Add padding to the elements */
+                text-align: center; /* Center-align the text */
+                border-top: 0; /* Remove the border-top */
+                margin: 20px; /* Add outer margin */
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <h1>CLINIC LONDONMET</h1>
+        <div class="container">
+            <div class="paragraph-container">
+                <p>If you are not an already registered user, click the "Not Registered User" button to register to the system by putting your details.</p>
+                <p>Once you filled your details correctly it will direct you to the login page again.</p>
+                <p>Then you have to fill up the name that you have given and your generated patient Id, when you were registering to the system.</p>
+                <p>If you have registered yourself already, you can click the "Registered User" button and fill up your name and the Id for the login process.</p>
+                <p>When you are logged in, the website will show you three main options such as Clinic, Pharmacy and Booked appointments.</p>
+            </div>
+            <div class="button-container">
+                <h:form>
+                    <h:commandButton value="Registered User" action="validationForm" styleClass="button" />
+                    <h:commandButton value="Not Registered User" action="userDetails" styleClass="button" />
+                </h:form>
+            </div>
+        </div>
+        <h:button value="Return to Home Page" outcome="index.xhtml" styleClass="return-button"/>
+    </h:body>
+</html>

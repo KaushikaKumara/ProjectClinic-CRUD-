@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <head>
+        <title>Pharmacy</title>
+        <style>
+            /* General Styles */
+            body {
+                font-family: 'Helvetica Neue', sans-serif;
+                background-image: url('https://img.freepik.com/premium-photo/stethoscope-black-background-copy-space_446269-367.jpg');
+                background-color: #f8f8f8;
+                color: #333333;
+                line-height: 1.6;
+                margin: 0;
+                padding: 0;
+            }
+
+            /* Headings */
+            h1, h2, h3 {
+                font-family: 'Playfair Display', serif;
+                font-weight: 700;
+                margin-top: 2rem;
+                margin-bottom: 1rem;
+            }
+
+            h1 {
+                color : white;
+                font-size: 3rem;
+                text-align: center;
+            }
+
+            h2 {
+                color : white;
+                margin-top: 0; /* Remove default margin */
+                margin-left: 20px; /* Adjust margin to align with the "WELCOME" text */
+                font-size: 2.5rem;
+            }
+
+            h3 {
+                color : black;
+                font-size: 2rem;
+            }
+
+            /* Container Styles */
+            .medicine-container {
+                display: flex;
+                align-items: center;
+                padding: 1.5rem;
+                background-color: #ffffff;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                margin-bottom: 2rem;
+                border-radius: 8px;
+                transition: box-shadow 0.6s ease-in-out;
+                
+                background-color: rgba(240, 240, 240, 0.8); /* Transparent white */
+                padding: 20px; /* Add padding to the container */
+                border-radius: 10px; /* Add border radius to the container */
+                text-align: left; /* Align text to the left within the container */
+                max-width: 800px; /* Set maximum width */
+                margin: 20px 20px 20px 20px; /* Adjust margins */
+            }
+
+            .image-container {
+                width: 100px; /* Set a fixed width */
+                height: 100px; /* Set a fixed height */
+                overflow: hidden; /* Crop any part of the image that exceeds the container */
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                transition: box-shadow 0.3s ease-in-out;
+                margin-right: 2rem;
+            }
+
+            /* Image Styles */
+            .medicine-image {
+                width: 100%; /* Make the image fill the container */
+                height: 100%;
+                object-fit: cover; /* Preserve aspect ratio and crop any part that exceeds the container */
+            }
+
+            .medicine-container:hover {
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+
+            /* Image Styles */
+            .medicine-image {
+                width: 150px;
+                height: auto;
+                margin-right: 2rem;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                transition: box-shadow 0.3s ease-in-out;
+            }
+
+            .medicine-image:hover {
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+
+            /* Button Styles */
+            h:button {
+                display: block;
+                margin: 2rem auto 0;
+                padding: 1rem 2rem;
+                background-color: #2c3e50;
+                color: #ffffff;
+                border: none;
+                border-radius: 4px;
+                font-size: 1.2rem;
+                cursor: pointer;
+                transition: background-color 0.3s ease-in-out;
+            }
+
+            h:button:hover {
+                background-color: #1a252f;
+            }
+            .return-button {
+                position: fixed;
+                bottom: 20px;
+                left: 20px;
+                z-index: 999; /* Ensure it's above other elements */
+                margin-left: 20px; /* Adjust margin to create space between buttons */
+            }
+
+            .return-button input[type="button"] {
+                background-color: #ffffff;
+                color: #000000;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            .return-button input[type="button"]:hover {
+                background-color: #dddddd;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Pharmacy / Prescription</h1>
+        <h2>Common Medicines</h2>
+
+        <div class="medicine-container">
+            <div class="image-container">
+                <img class="medicine-image" src="https://www.panadol.com/content/dam/cf-consumer-healthcare/panadol-reborn/en_IE/redesign/product-packshots/Panadol-Base-Compack-12s-(3D).png" alt="Panadol" />
+            </div>
+            <div>
+                <h3>Panadol</h3>
+                <p>Description: Panadol is a common pain reliever and fever reducer.</p>
+            </div>
+        </div>
+
+        <div class="medicine-container">
+            <div class="image-container">
+                <img class="medicine-image" src="https://thefrenchpharmacy.co/cdn/shop/products/Untitleddesign_83_69e4eb03-ff34-4291-915c-1d140ea6e526.jpg?v=1644706585" alt="Gaviscone" />
+            </div>
+            <div>
+                <h3>Gaviscone</h3>
+                <p>Description: Gaviscone is an antacid used to relieve heartburn and indigestion.</p>
+            </div>
+        </div>
+
+        <div class="medicine-container">
+            <div class="image-container">
+                <img class="medicine-image" src="https://www.pillsorted.com/wp-content/uploads/2023/06/Aspirin2075mg20tablets2028s.png" alt="Aspirin" />
+            </div>
+            <div>
+                <h3>Aspirin</h3>
+                <p>Description: Aspirin is a medication used to reduce pain, fever, or inflammation.</p>
+            </div>
+        </div>
+
+        <div class="medicine-container">
+            <div class="image-container">
+                <img class="medicine-image" src="https://pics.walgreens.com/prodimg/657576/900.jpg" alt="Benadryl" />
+            </div>
+            <div>
+                <h3>Benadryl</h3>
+                <p>Description: Benadryl is an antihistamine used to relieve symptoms of allergy, hay fever, and the common cold.</p>
+            </div>
+        </div>
+
+        <div class="medicine-container">
+            <div class="image-container">
+                <img class="medicine-image" src="https://www.pillsorted.com/wp-content/uploads/2023/06/IBUPROFEN20200mg2024.png" alt="Ibuprofen" />
+            </div>
+            <div>
+                <h3>Ibuprofen</h3>
+                <p>Description: Ibuprofen is a nonsteroidal anti-inflammatory drug (NSAID) used to relieve pain, fever, and inflammation.</p>
+            </div>
+        </div>
+
+        <div class="medicine-container">
+            <div class="image-container">
+                <img class="medicine-image" src="https://www.quickmeds.co.uk/go_files/products/995613.jpg" alt="Loratadine" />
+            </div>
+            <div>
+                <h3>Loratadine</h3>
+                <p>Description: Loratadine is an antihistamine used to treat allergies, hay fever, and hives.</p>
+            </div>
+        </div>
+
+        <div class="medicine-container">
+            <div class="image-container">
+                <img class="medicine-image" src="https://www.clickpharmacy.co.uk/AppImages/Product/img/ranitidine.webp" alt="Ranitidine" />
+            </div>
+            <div>
+                <h3>Ranitidine</h3>
+                <p>Description: Ranitidine is an H2 blocker that decreases the amount of acid created by the stomach.</p>
+            </div>
+        </div>
+
+        <div class="medicine-container">
+            <div class="image-container">
+                <img class="medicine-image" src="https://www.pharmacyonline.co.uk/uploads/images/products/large/pharmacy-online-paracetamol-paracetamol-500mg-100-tablets-1602960473paracetamol-1.jpg" alt="Paracetamol" />
+            </div>
+            <div>
+                <h3>Paracetamol</h3>
+                <p>Description: Paracetamol is a medication used to treat pain and fever.</p>
+            </div>
+        </div>
+
+        <div class="medicine-container">
+            <div class="image-container">
+                <img class="medicine-image" src="https://m.media-amazon.com/images/I/71qFv4HgI1L._AC_UF894,1000_QL80_.jpg" alt="Tums" />
+            </div>
+            <div>
+                <h3>Tums</h3>
+                <p>Description: Tums is an antacid used to relieve heartburn, acid indigestion, and upset stomach.</p>
+            </div>
+        </div>
+
+        <div class="medicine-container">
+            <div class="image-container">
+                <img class="medicine-image" src="https://www.chemist-4-u.com/media/catalog/product/cache/f82c79c06fdfbb9bff4567c21265baf6/b/m/bmv_-_cetirizine_10mg_-_hay_fever_allergy_relief_-_360_tablets_-_front_face_mockup_1_.jpg" alt="Cetirizine" />
+            </div>
+            <div>
+                <h3>Cetirizine</h3>
+                <p>Description: Cetirizine is an antihistamine used to relieve allergy symptoms such as watery eyes, runny nose, itching eyes/nose, and sneezing.</p>
+            </div>
+        </div>
+
+        <h:form>
+            <h:button value="Return to Main Menu" outcome="welcomePage.xhtml" styleClass="return-button"/>
+        </h:form>
+    </body>
+</html>

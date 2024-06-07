@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:h="http://java.sun.com/jsf/html"
+       xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <h:outputStylesheet name="styles.css" />
+        <title>Clinic: Patient details</title>
+    </h:head>
+    <h:body>
+        <h1>CLINIC LONDONMET</h1>
+        <h2>Sign in Page [Not Registered User]</h2>
+        <p>Please fill all the fields with your details.</p>
+        <p>When you are done filling those fields, please select "Save Details" button.</p>
+        <h:form id="patientForm" class="container">
+            <h:panelGrid columns="3">
+
+                <h:outputText value="Full Name:"/> 
+                <h:inputText id="fullNameInputText" required="true"
+                             requiredMessage="Please enter full name"
+                             value="#{PatientInformationBean.patientName}" maxlength="30">
+                    <f:ajax event="blur" render="fullNameMessage"/>
+                </h:inputText>
+                <h:message id="fullNameMessage" for="fullNameInputText" styleClass="error"/>
+
+                <h:outputText value="Age:"/>
+                <h:inputText id="ageInputText" required="true"
+                             requiredMessage="Please enter the age"
+                             value="#{PatientInformationBean.patientAge}" maxlength="150">
+                    <f:ajax event="blur" render="ageMessage"/>
+                </h:inputText>
+                <h:message id="ageMessage" for="ageInputText" styleClass="error"/>
+
+                <h:outputText value="Address:"/>
+                <h:inputText id="addressInputText" required="true"
+                             requiredMessage="Please enter the address"
+                             value="#{PatientInformationBean.patientAddress}" maxlength="100">
+                    <f:ajax event="blur" render="addressMessage"/>
+                </h:inputText>
+                <h:message id="addressMessage" for="addressInputText" styleClass="error"/>
+
+                <h:outputText value="PhoneNumber:"/>
+                <h:inputText id="phoneNumberInputText" required="true"
+                             requiredMessage="Please enter the phone number"
+                             value="#{PatientInformationBean.patientPhone}" maxlength="11">
+                    <f:ajax event="blur" render="phoneNumberMessage"/>
+                </h:inputText>
+                <h:message id="phoneNumberMessage" for="phoneNumberInputText" styleClass="error"/>
+
+            </h:panelGrid>
+
+            <h:commandButton value="Save Details" class="button"
+                             action="#{PatientInformationBean.save}">
+                <f:ajax execute="@form" render="@form"/>
+            </h:commandButton>
+
+        </h:form>
+        <h:message id="patientNameErrorMessage" for="fullNameInputText" styleClass="error"/>
+    </h:body>
+    <h:button value="Return to Home Page" outcome="getstart.xhtml" styleClass="return-button"/>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Front Page</title>
+        <style>
+
+            /* Reset some default styles */
+            •⁠  ⁠{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            /* Apply a background image */
+            body {
+                background-image: url('https://impeccabuild.com.au/wp-content/uploads/2020/07/Medical-Clinic-Interior-Design-Ideas-Medical-Fitouts-ImpeccaBuild-3-scaled.jpg');
+                background-size: cover;
+                background-position: center;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            /* Style the main content */
+            h1, h:form {
+                background-color: rgba(255, 255, 255, 0.8);
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                text-align: center;
+                padding: 20px; /* Add some padding to the elements */
+            }
+
+            h1 {
+                position: absolute; /* Set position to absolute */
+                top: 0; /* Position the element at the top of its containing element */
+                left: 0; /* Position the element at the left of its containing element */
+                width: 100%; /* Make the width 100% to stretch across the entire screen */
+                font-family: 'Montserrat', sans-serif;
+                font-size: 3rem;
+                color: white; /* Set text color to white */
+                background-color: black; /* Set background color to black */
+                padding: 20px; /* Add padding to the elements */
+                text-align: center; /* Center-align the text */
+                border-top: 0; /* Remove the border-top */
+            }
+
+
+
+            h:form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .button {
+                position: absolute; /* Set position to absolute */
+                bottom: 170px; /* Position the button 170px from the bottom of its containing element */
+                font-family: 'Open Sans', sans-serif;
+                font-size: 1.2rem;
+                padding: 10px 20px;
+                margin: 10px;
+                border: none;
+                border-radius: 5px;
+                background-color: #222; /* Darker background color */
+                color: #fff;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+
+            .button:hover {
+                background-color: #444; /* Darker background color on hover */
+            }
+
+
+            .button:hover {
+                background-color: #555;
+            }
+
+            p {
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 1rem;
+                margin-bottom: 10px; /* Add some space between paragraphs */
+                background-color: #f0f0f0; /* Example background color */
+                padding: 10px; /* Add padding to the paragraphs */
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <div>
+            <h1>CLINIC LONDONMET</h1>
+            <p>Welcome to the clinic Londonmet.</p>
+            <p>Through this website, you can book an appointment, make changes, see the booked appointments and some information about medicine.</p>
+            
+            <h:form>
+                <h:commandButton value="GET START" action="getstart" styleClass="button" />
+            </h:form>
+        </div>
+    </h:body>
+</html>

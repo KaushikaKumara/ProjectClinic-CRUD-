@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <style>
+            body {
+                background-color: #000000;
+                background-image: url('https://img.freepik.com/premium-photo/stethoscope-black-background-copy-space_446269-367.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                color: #ffffff;
+                font-family: Arial, sans-serif;
+                margin: 0; /* Reset default margin */
+                padding: 0; /* Reset default padding */
+            }
+
+            .button {
+                background-color: #ffffff;
+                color: #000000;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                margin: 10px 0; /* Adjust vertical margin */
+            }
+
+            .button:hover {
+                background-color: #dddddd;
+            }
+
+            .return-button {
+                position: fixed;
+                bottom: 20px;
+                left: 20px;
+                z-index: 999; /* Ensure it's above other elements */
+                margin-left: 20px; /* Adjust margin to create space between buttons */
+            }
+
+            .return-button input[type="button"] {
+                background-color: #ffffff;
+                color: #000000;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            .return-button input[type="button"]:hover {
+                background-color: #dddddd;
+            }
+
+            p {
+                font-family: 'Times New Roman', Times, serif; /* Set font family for paragraphs */
+                font-size: 1rem; /* Set font size for paragraphs */
+                background-color: rgba(240, 240, 240, 0.8); /* Transparent white */
+                padding: 20px; /* Add padding to the container */
+                border-radius: 10px; /* Add border radius to the container */
+                text-align: left; /* Align text to the left within the container */
+                max-width: 800px; /* Set maximum width */
+                margin: 20px 20px 20px 20px; /* Adjust margins */
+            }
+
+            p {
+                margin-bottom: 10px; /* Add some space between paragraphs */
+                color: #000000; /* Set text color to black */
+            }
+
+            h1 {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 1.5rem;
+                color: white; /* Set text color to white */
+                background-color: black; /* Set background color to black */
+                padding: 20px; /* Add padding to the elements */
+                text-align: center; /* Center-align the text */
+                border-top: 0; /* Remove the border-top */
+                margin: 20px; /* Add outer margin */
+            }
+
+            h2 {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 1.2rem; /* Set font size for subheading */
+                color: white; /* Set text color to white */
+                margin-left: 20px; /* Adjust margin to the left */
+            }
+            .login-info {
+                position: absolute;
+                top: 110px; /* Adjust the distance from the top */
+                right: 20px; /* Adjust the distance from the right */
+                padding: 10px;
+                background-color: rgba(255, 255, 255, 0.1);
+                border-radius: 5px;
+                font-size: 1rem;
+                display: flex; /* Use flexbox for layout */
+                flex-direction: column; /* Arrange items vertically */
+            }
+
+            .login-info h:outputText {
+                margin-bottom: 5px; /* Add margin between items */
+            }
+
+            .clinic-form {
+                margin-top: 0; /* Remove default margin */
+                margin-left: 20px; /* Adjust margin to align with the "WELCOME" text */
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <h1>CLINIC LONDONMET</h1>
+        <h2>WELCOME</h2>
+        <p>Please select one of the Doctors that you want to continue with.</p>
+        <div class="login-info">
+            <h:outputText value ="Logged in as: #{ClinicFormBean.validatedPatientName}" />
+<!--            <h:outputText value ="User ID:#{ClinicFormBean.validatedPatientName}" />-->
+        </div>
+
+        <h:form id="clinicForm" class="clinic-form">
+            <h:selectOneRadio value="#{ClinicFormBean.selectedOption}" layout="pageDirection">
+                <f:selectItem itemLabel="General practitioner" itemValue="1" />
+                <f:selectItem itemLabel="Surgeon" itemValue="2" />
+                <f:selectItem itemLabel="Cardiologist" itemValue="3" />
+                <f:selectItem itemLabel="Oncologist" itemValue="4" />
+                <f:selectItem itemLabel="Psychiatrist" itemValue="5" />
+                <f:selectItem itemLabel="Obstetrician and gynaecologist" itemValue="6" />
+            </h:selectOneRadio>
+            <h:commandButton value="Next" action="#{ClinicFormBean.submit}" class="button"/>
+        </h:form>
+
+        <h:button value="Return to Main Menu" outcome="welcomePage.xhtml" styleClass="return-button"/>
+    </h:body>
+</html>
+

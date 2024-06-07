@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <h:outputStylesheet name="styles.css" />
+        <title>Confirmation Page</title>
+    </h:head>
+    <h:body>
+        <h1>CLINIC LONDONMET</h1>
+        <h2>WELCOME</h2>
+        <p>Your information has been saved and we have registered you as a new user</p>
+        <p>Please note down your new generated User ID showing below.</p>
+        <p>You need that User ID to login right after this page.</p> 
+
+        <div class="info-container">
+            <h:outputText value="Generated Patient ID: #{PatientInformationBean.generatedPatientId}" styleClass="output-text"/> <br/>
+            <h:outputText value=" for the Patient: #{PatientInformationBean.patientName}" styleClass="output-text"/> <br/>
+        </div>
+        <h:button value="Return to Login page" outcome="validationForm.xhtml" styleClass="return-button"/>
+    </h:body>
+</html>
